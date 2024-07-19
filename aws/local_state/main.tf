@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-east-1a"
+  region = "us-east-1"  # Correcting the region format to avoid an error (availability zone should not be used here)
 }
 
 resource "aws_instance" "app_server" {
@@ -21,4 +21,3 @@ resource "aws_instance" "app_server" {
     Name = "Terraform_Demo"
   }
 }
-
